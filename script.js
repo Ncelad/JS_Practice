@@ -5,6 +5,9 @@ task_4()
 task_5()
 task_6()
 task_7()
+task_8()
+task_9()
+task_10()
 
 function task_1(){
     let name = prompt("Your name:");
@@ -43,5 +46,22 @@ function task_6(){
 function task_7(){
     const file_size = 820;
     let gigabytes = prompt("Gigabytes:");
-    alert("There are can be: " + eval((gigabytes*1024)/file_size) + " files with size of " + file_size + " MB.");
+    alert("There are can be: " + eval(parseInt((gigabytes*1024)/file_size)) + " files with size of " + file_size + " MB.");
+}
+
+function task_8(){
+    let money = prompt("Money you have:");
+    let price = prompt("Price of one chocolate:");
+    let count = eval(money/price);
+    alert("You can buy: " + parseInt(count).toString() + " and you remainder " + eval(count - parseInt(count)) + ".");
+}
+
+function task_9(){
+    let num = prompt("Three-symbol number:");
+    alert("Reversed number: " + num.toString().split('').reverse().join('') + ".");
+}
+
+function task_10(){
+    let num = prompt("Is even number?:");
+    alert(num % 2 == 0);
 }
